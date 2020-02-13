@@ -1,0 +1,12 @@
+[package]
+name = "nessie"
+version = "0.1.0"
+authors = ["0urobor0s <0urobor0s@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+obfstr = "0.1.0"
+ultra = "0.5.0"
+rust-crypto = "^0.2"

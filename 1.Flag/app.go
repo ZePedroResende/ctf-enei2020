@@ -7,8 +7,14 @@ import (
 
 func main() {
 	fs := http.FileServer(http.Dir("static"))
-	http.Handle("/", fs)
+	http.Handle("/", http.StripPrefix("/", fs))
+	http.Handle("/Zmlub3M=", http.HandlerFunc(downloadHandler))
 
 	log.Println("Listening...")
 	http.ListenAndServe(":3000", nil)
+}
+
+func downloadHandler(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "./flag/flag.png")
+
 }

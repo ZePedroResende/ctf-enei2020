@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"unsafe"
 )
 
 func main() {
@@ -15,7 +16,40 @@ func main() {
 		fmt.Println("Something is wrong with your computer, ", err)
 	}
 
-	if string(user_input) == "The answer to life is beer" {
+	const (
+		EAX = uint8(unsafe.Sizeof(true))
+	)
+
+	var str []byte
+
+	str = append(str, ((EAX<<EAX<<EAX^EAX)<<EAX<<EAX|EAX)<<EAX<<EAX)
+	str = append(str, ((EAX<<EAX^EAX)<<EAX<<EAX|EAX)<<EAX<<EAX<<EAX)
+	str = append(str, (((EAX<<EAX^EAX)<<EAX<<EAX<<EAX|EAX)<<EAX<<EAX ^ EAX))
+	str = append(str, EAX<<EAX<<EAX<<EAX<<EAX<<EAX)
+	str = append(str, ((EAX<<EAX^EAX)<<EAX<<EAX<<EAX<<EAX<<EAX | EAX))
+	str = append(str, ((((EAX<<EAX^EAX)<<EAX<<EAX|EAX)<<EAX^EAX)<<EAX^EAX)<<EAX)
+	str = append(str, ((((EAX<<EAX^EAX)<<EAX|EAX)<<EAX<<EAX<<EAX^EAX)<<EAX ^ EAX))
+	str = append(str, (((((EAX<<EAX^EAX)<<EAX|EAX)<<EAX<<EAX^EAX)<<EAX^EAX)<<EAX ^ EAX))
+	str = append(str, (((EAX<<EAX^EAX)<<EAX<<EAX<<EAX|EAX)<<EAX<<EAX ^ EAX))
+	str = append(str, (((EAX<<EAX^EAX)<<EAX|EAX)<<EAX<<EAX<<EAX^EAX)<<EAX)
+	str = append(str, EAX<<EAX<<EAX<<EAX<<EAX<<EAX)
+	str = append(str, (((EAX<<EAX^EAX)<<EAX|EAX)<<EAX<<EAX^EAX)<<EAX<<EAX)
+	str = append(str, (((((EAX<<EAX^EAX)<<EAX<<EAX|EAX)<<EAX^EAX)<<EAX^EAX)<<EAX ^ EAX))
+	str = append(str, EAX<<EAX<<EAX<<EAX<<EAX<<EAX)
+	str = append(str, (((EAX<<EAX^EAX)<<EAX<<EAX|EAX)<<EAX^EAX)<<EAX<<EAX)
+	str = append(str, (((EAX<<EAX^EAX)<<EAX<<EAX|EAX)<<EAX<<EAX<<EAX ^ EAX))
+	str = append(str, (((EAX<<EAX^EAX)<<EAX<<EAX<<EAX|EAX)<<EAX^EAX)<<EAX)
+	str = append(str, (((EAX<<EAX^EAX)<<EAX<<EAX<<EAX|EAX)<<EAX<<EAX ^ EAX))
+	str = append(str, EAX<<EAX<<EAX<<EAX<<EAX<<EAX)
+	str = append(str, (((EAX<<EAX^EAX)<<EAX<<EAX|EAX)<<EAX<<EAX<<EAX ^ EAX))
+	str = append(str, ((((EAX<<EAX^EAX)<<EAX|EAX)<<EAX<<EAX<<EAX^EAX)<<EAX ^ EAX))
+	str = append(str, EAX<<EAX<<EAX<<EAX<<EAX<<EAX)
+	str = append(str, ((EAX<<EAX^EAX)<<EAX<<EAX<<EAX<<EAX|EAX)<<EAX)
+	str = append(str, (((EAX<<EAX^EAX)<<EAX<<EAX<<EAX|EAX)<<EAX<<EAX ^ EAX))
+	str = append(str, (((EAX<<EAX^EAX)<<EAX<<EAX<<EAX|EAX)<<EAX<<EAX ^ EAX))
+	str = append(str, (((EAX<<EAX^EAX)<<EAX|EAX)<<EAX<<EAX<<EAX^EAX)<<EAX)
+
+	if string(user_input) == string(str) {
 		fmt.Println(a)
 	} else {
 		fmt.Println("That's all folks !")

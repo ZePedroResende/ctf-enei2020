@@ -1,2 +1,2 @@
 User-agent: *
-/flag
+/flag on the web

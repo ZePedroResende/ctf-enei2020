@@ -1,7 +1,5 @@
 package main
 
-const (
-	a = `
+const a = `
 	asdfasd
 	`
-)

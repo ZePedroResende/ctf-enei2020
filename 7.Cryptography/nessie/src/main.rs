@@ -29,7 +29,7 @@ fn main() {
 
     let no_access = obfstr::obflocal!("No Access.");
     let lapras = obfstr::obflocal!("Lapras");
-    let url = obfstr::obflocal!("https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1024px-Wikipedia-logo-v2.svg.png");
+    let url = obfstr::obflocal!("http://localhost:8003/ad0e70df2c7ae0a2d63e643761e674567c00498312b7de8236253dc32b3e3baf6e9dbc612013e28099d237716bc5d49607380690913c83d307783167deada7eb");
 
     let args: Vec<String> = env::args().collect();
 

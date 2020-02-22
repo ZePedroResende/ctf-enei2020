@@ -27,6 +27,9 @@ func contentHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	http.HandleFunc("/naps", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "/naps.png")
+	})
 	http.Handle("/", http.HandlerFunc(contentHandler))
 	http.ListenAndServe(":3000", nil)
 }

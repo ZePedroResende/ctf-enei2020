@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package flag;
+
+service Flag {
+  rpc getFlag(FlagRequest) returns (FlagReply);
+}
+
+message FlagRequest {
+  string pass = 1;
+}
+
+message FlagReply {
+  string message = 1;
+}

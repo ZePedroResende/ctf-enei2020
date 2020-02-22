@@ -2,20 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<link rel="shortcut icon" href="static/img/favicon.png" type="image/x-icon">
-	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
-
-	<link rel="stylesheet" type="text/css" href="static/css/font.css" />
-	<link href="static/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="static/css/material-bootstrap-wizard.css" rel="stylesheet" />
 </head>
 
 <body>
-	<div class="image-container set-full-height" style="background-color: #272822;">
-	    <!--   Creative Tim Branding   -->
-	    <!--   Big container   -->
+	<div class="image-container set-full-height" >
+        <h1> Router login </h1>
 	    <div class="container" style="width: 970px;">
 	        <div class="row">
 		        <div class="col-sm-8 col-sm-offset-2">
@@ -23,20 +14,6 @@
 		            <div class="wizard-container">
 		                <div class="card wizard-card" data-color="green" id="wizardProfile">
 		                    <form>
-		                    	<div class="wizard-header">
-		                        	<h3 class="wizard-title">
-		                        	   <a href="http://github.com/c0ny1/xxe-lab">XXE-Lab for Python</a>
-		                        	</h3>
-									<img src="static/img/python_logo.png">
-		                    	</div>
-								<div class="wizard-navigation">
-									<ul>
-			                            <li><a href="#about" data-toggle="tab">tips:</a></li>
-			                            <li><a href="javascript:void(0)" ><span style="color:red;" class="msg"></span></a></li>
-										<li><a href="javascript:void(0)"></a></li>
-			                        </ul>
-								</div>
-
 		                        <div class="tab-content">
 		                            <div class="tab-pane" id="about">
 		                              <div class="row">
@@ -62,8 +39,8 @@
 		                                	</div>
 		                            	</div>
 		                            </div>
-		                            
-		                            
+
+
 		                        </div>
 		                        <div class="wizard-footer">
 		                            <div class="pull-right">
@@ -79,11 +56,6 @@
 	        </div><!-- end row -->
 	    </div> <!--  big container -->
 
-	    <div class="footer">
-	        <div class="container text-center">
-	             Copyright By <a href="http://gv7.me">c0ny1</a>
-	        </div>
-	    </div>
 	</div>
 </body>
 <!--   Core JS Files   -->
@@ -95,7 +67,7 @@
 <script src="static/js/material-bootstrap-wizard.js"></script>
 
 <script src="static/js/jquery.validate.min.js"></script>
-<script type='text/javascript'> 
+<script type='text/javascript'>
 function doLogin(){
 	var username = $("#username").val();
 	var password = $("#password").val();
@@ -103,8 +75,8 @@ function doLogin(){
 		alert("Please enter the username and password!");
 		return;
 	}
-	
-	var data = "<user><username>" + username + "</username><password>" + password + "</password></user>"; 
+
+	var data = "<user><username>" + username + "</username><password>" + password + "</password></user>";
     $.ajax({
         type: "POST",
         url: "doLogin",
@@ -126,7 +98,7 @@ function doLogin(){
         error: function (XMLHttpRequest,textStatus,errorThrown) {
             $(".msg").text(errorThrown + ':' + textStatus);
         }
-    }); 
+    });
 }
 </script>
 </html>

@@ -14,11 +14,11 @@ import (
 	"github.com/dgrijalva/jwt-go"
 )
 
-var jwtKey = []byte("super_dupper_secret_key")
+var jwtKey = []byte("tL8GnT#DBjWeRt5DMdPTDKqEM4@sd*5ExA2sSy0Jaxne&Y8g4o4xhE7")
 
 var users = map[string]string{
 	"user1": "password1",
-	"admin": "123fga14afsdgg91841jasjdflkas0140128481jlkfjkfsajklsdf",
+	"admin": "Be5c51n&UQla3ax7dntFn&Z*pgiHu$DQOv2js297C@uY22NxCdlk*@E93*Bo35URdGqR5NpZAhoDf*BaW2bCKVzHb0SII",
 }
 
 type Credentials struct {

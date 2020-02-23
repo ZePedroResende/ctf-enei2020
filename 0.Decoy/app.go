@@ -20,7 +20,7 @@ func contentHandler(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("Failed to download"))
 	}
 
-	w.Header().Set("Content-Disposition", "attachment; filename=pls_install.exe")
+	w.Header().Set("Content-Disposition", "attachment; filename=totally_not_a_virus.exe")
 	w.Header().Set("Content-Type", r.Header.Get("Content-Type"))
 
 	w.Write(data)

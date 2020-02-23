@@ -40,7 +40,7 @@ fn main() {
 
     let h = hour();
     if h > 6 && h < 20 {
-        println!("Loch Ness Monster is not here.");
+        println!("Loch Ness Monster is not here. Try again later.");
         return;
     }
 

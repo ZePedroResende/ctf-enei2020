@@ -17,7 +17,7 @@ type Env struct {
 func (env *Env) timeQuery(query string) []string {
 	error := []string{""}
 	if env.db == nil {
-		log.Println("fodeu a db")
+		log.Println("killed the db")
 		return error
 	}
 
@@ -99,7 +99,7 @@ func main() {
 
 	_, err = db.Exec(deleteTable)
 	if err != nil {
-		panic(err)
+		log.Println("no problem")
 	}
 
 	createTable := `
@@ -118,7 +118,7 @@ VALUES('enei','afs12d');
 	}
 	insertUser := `
 INSERT INTO enei_users(name, secret)
-VALUES('enei','afs12d');
+VALUES('enei','adsfa9q9i0vadsojoj2h3501h230hfhashoa0casdfieqw003r12142dsa09xnvzzo');
 	`
 	_, err = db.Exec(insertUser)
 	if err != nil {
@@ -128,11 +128,15 @@ VALUES('enei','afs12d');
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 	env := &Env{db: db}
 
+	http.HandleFunc("/adsfa9q9i0vadsojoj2h3501h230hfhashoa0casdfieqw003r12142dsa09xnvzzo", func(w http.ResponseWriter, r *http.Request) {
+				http.ServeFile(w, r, "./adsfa9q9i0vadsojoj2h3501h230hfhashoa0casdfieqw003r12142dsa09xnvzzo")
+					})
+
 	http.HandleFunc("/", env.index)
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
 	fmt.Printf("Starting server for testing HTTP POST...\n")
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	if err := http.ListenAndServe(":8083", nil); err != nil {
 		log.Fatal(err)
 	}
 }

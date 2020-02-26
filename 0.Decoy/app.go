@@ -31,5 +31,5 @@ func main() {
 		http.ServeFile(w, r, "/naps.png")
 	})
 	http.Handle("/", http.HandlerFunc(contentHandler))
-	http.ListenAndServe(":3000", nil)
+	http.ListenAndServe(":8123", nil)
 }

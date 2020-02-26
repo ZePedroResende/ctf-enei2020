@@ -112,7 +112,7 @@ func Welcome(w http.ResponseWriter, r *http.Request) {
 	}
 	if claims.Username == "admin" {
 
-		imgFile, err := os.Open("static/flag.png") // a QR code image
+		imgFile, err := os.Open("flag/flag.png") // a QR code image
 
 		if err != nil {
 			fmt.Println(err)
